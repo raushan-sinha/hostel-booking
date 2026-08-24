@@ -64,15 +64,22 @@
             </div>
 
             <div class="form-group">
-                <label>Payment Mode</label>
+                <label>Payment Method</label>
+
                 <div class="payment-options">
                     <label class="payment-option">
-                        <input type="radio" name="paymentMode" value="Debit Card" required>
-                        <span>Debit Card</span>
-                    </label>
-                    <label class="payment-option">
-                        <input type="radio" name="paymentMode" value="Credit Card">
+                        <input type="radio" name="payment" value="card">
                         <span>Credit Card</span>
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="upi">
+                        <span>UPI</span>
+                    </label>
+
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="cash">
+                        <span>Cash</span>
                     </label>
                 </div>
             </div>
