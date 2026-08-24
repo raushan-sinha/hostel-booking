@@ -1,166 +1,168 @@
 *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        }
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        .form-container {
-            width: 100%;
-            max-width: 520px;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            padding: 2rem 2.25rem;
-        }
+.form-container {
+    width: 100%;
+    max-width: 520px;
+    padding: 2rem 2.25rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+}
 
-        .form-heading {
-            text-align: center;
-            color: #2d3748;
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 0.35rem;
-        }
+.form-heading,
+.form-subheading {
+    text-align: center;
+}
 
-        .form-subheading {
-            text-align: center;
-            color: #718096;
-            font-size: 0.9rem;
-            margin-bottom: 1.75rem;
-        }
+.form-heading {
+    margin-bottom: .35rem;
+    color: #2d3748;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
 
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
+.form-subheading {
+    margin-bottom: 1.75rem;
+    color: #718096;
+    font-size: .9rem;
+}
 
-        .form-group label {
-            display: block;
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: #4a5568;
-            margin-bottom: 0.4rem;
-        }
+.form-group {
+    margin-bottom: 1.25rem;
+}
 
-        .form-group input[type="text"],
-        .form-group input[type="email"],
-        .form-group input[type="date"],
-        .form-group select {
-            width: 100%;
-            padding: 0.65rem 0.85rem;
-            font-size: 0.95rem;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 8px;
-            background: #f7fafc;
-            color: #2d3748;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
+.form-group label {
+    display: block;
+    margin-bottom: .4rem;
+    color: #4a5568;
+    font-size: .875rem;
+    font-weight: 600;
+}
 
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
-            background: #ffffff;
-        }
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: .65rem .85rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    background: #f7fafc;
+    color: #2d3748;
+    font-size: .95rem;
+}
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, .2);
+    background: #fff;
+}
 
-        .payment-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.25rem;
-            margin-top: 0.35rem;
-        }
+.form-row,
+.button-group {
+    display: grid;
+    gap: 1rem;
+}
 
-        .payment-option {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            cursor: pointer;
-        }
+.form-row {
+    grid-template-columns: 1fr 1fr;
+}
 
-        .payment-option input[type="radio"] {
-            width: 18px;
-            height: 18px;
-            accent-color: #667eea;
-            cursor: pointer;
-        }
+.button-group {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.75rem;
+}
 
-        .payment-option span {
-            font-size: 0.95rem;
-            color: #4a5568;
-        }
+.btn {
+    padding: .75rem 1.25rem;
+    border: 0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
 
-        .button-group {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.75rem;
-        }
+.btn-submit {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+}
 
-        .btn {
-            flex: 1;
-            padding: 0.75rem 1.25rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.15s;
-        }
+.btn-reset {
+    background: #edf2f7;
+    color: #4a5568;
+}
 
-        .btn-submit {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #ffffff;
-        }
+.btn:hover {
+    transform: translateY(-1px);
+    opacity: .92;
+}
 
-        .btn-submit:hover {
-            opacity: 0.92;
-            transform: translateY(-1px);
-        }
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
 
-        .btn-reset {
-            background: #edf2f7;
-            color: #4a5568;
-        }
+    .form-container {
+        padding: 1.5rem 1.25rem;
+    }
 
-        .btn-reset:hover {
-            background: #e2e8f0;
-            transform: translateY(-1px);
-        }
+    .form-row,
+    .button-group {
+        grid-template-columns: 1fr;
+    }
 
-        @media (max-width: 480px) {
-            body {
-                padding: 1rem;
-            }
+    .form-heading {
+        font-size: 1.45rem;
+    }
+}
 
-            .form-container {
-                padding: 1.5rem 1.25rem;
-            }
+.payment-options {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: .5rem;
+}
 
-            .form-heading {
-                font-size: 1.45rem;
-            }
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
 
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
+.payment-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #667eea;
+    cursor: pointer;
+}
 
-            .button-group {
-                flex-direction: column;
-            }
-        }
+.payment-option span {
+    color: #4a5568;
+    font-size: .95rem;
+}
+
+@media (max-width: 480px) {
+    .payment-options {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
